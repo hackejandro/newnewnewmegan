@@ -1,0 +1,310 @@
+.blank-homage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tiny-image {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.book-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.book-image img {
+  width: 25%;
+  margin: auto;
+  display: block;
+}
+
+.buy-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: red;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-50px);
+}
+
+.book-image:hover .buy-overlay {
+  transform: translateY(0);
+}
+
+.caption {
+  text-align: center;
+}
+
+.koopknop {
+  left: 50%;
+  width:40px;
+  height:40px;
+}  
+
+.section2 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+}
+
+.geese-image {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  animation: move-geese 20s linear infinite;
+}
+
+@keyframes move-geese {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+/* .jellyfish-image {
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  position: absolute;
+  display: block;
+} */
+
+.jellyfish-image-bottom {
+ position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  transform: rotate(45deg);
+  animation-name: moveJellyfish;
+  animation-duration: 45s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: -1;
+}
+
+@keyframes moveJellyfish {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(calc(100vw - 150px), calc(-100vh + 150px));
+  }
+}
+
+.jiggle {
+  animation: jiggle 0.3s ease-in-out alternate infinite;
+}
+
+@keyframes jiggle {
+  0% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(2px);
+  }
+}
+
+.burnt-marshmallow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+.text-message-image {
+  position: absolute;
+  bottom: 20px;
+  left: 75%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.text-message-image img:hover {
+  transform: scale(3.0);
+}
+
+.text-message-image img {
+  width: 100px;
+  height: 200px;
+}
+
+.contact {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top-left-radius: 5px;
+  cursor: pointer;
+}
+
+.contact p {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-info {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-bottom-right-radius: 5px;
+  z-index: 1;
+}
+
+.contact:hover .contact-info {
+  display: block;
+}
+
+
+/* .kopen-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  font-weight: bold;
+  color: red;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.move-down {
+  animation: move-down 0.5s linear forwards;
+}
+
+@keyframes move-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+#kopen-text {
+  pointer-events: none;
+}
+ */
+
+/* New book announcement at top of page */
+.new-book-announcement {
+  text-align: center;
+  padding: 20px 20px 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.new-book-link {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+  font-size: 16px;
+}
+
+.new-book-link:hover {
+  text-decoration: underline;
+}
+
+.new-book-details {
+  max-width: 600px;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+.new-book-cover {
+  width: 250px;
+  max-width: 80%;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.new-book-description {
+  text-align: left;
+  line-height: 1.5;
+  margin: 0 0 15px;
+}
+
+.preorder-button {
+  display: inline-block;
+  padding: 10px 24px;
+  margin-top: 10px;
+  background-color: #e63946;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.preorder-button:hover {
+  background-color: #c92a37;
+}
+
+/* Click-here-for-big-jellyfish link */
+.large-jellyfish-link {
+  position: absolute;
+  bottom: 20px;
+  left: 180px;
+  margin: 0;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.large-jellyfish-link:hover {
+  text-decoration: underline;
+}
+
+/* Big jellyfish overlay */
+.jellyfish-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.jellyfish-overlay img {
+  max-height: 90vh;
+  max-width: 90vw;
+}
