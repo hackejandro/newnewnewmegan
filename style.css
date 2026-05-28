@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .tiny-image {
@@ -324,11 +325,13 @@
   right: 24px;
   z-index: 40;
   line-height: 0;
+  display: inline-block;
 }
 
 .substack-link svg {
   width: 36px;
   height: 36px;
+  display: block;
 }
 
 .scroll-hint {
@@ -345,12 +348,15 @@
 /* Long scroll section with scattered short story links */
 .long-scroll {
   position: relative;
+  display: block;
   width: 100%;
   height: 2000vh;
+  min-height: 2000vh;
 }
 
 .story-link {
   position: absolute;
+  display: block;
   text-decoration: none;
   color: #222;
   font-size: 18px;
@@ -362,11 +368,11 @@
   text-decoration: underline;
 }
 
-.story-1 { top: 4%;  left: 8%;  }
-.story-2 { top: 18%; right: 6%; }
-.story-3 { top: 38%; left: 18%; }
-.story-4 { top: 62%; right: 14%; }
-.story-5 { top: 85%; left: 10%; }
+.story-1 { top: 100vh;  left: 8%;  }
+.story-2 { top: 380vh;  right: 6%; }
+.story-3 { top: 760vh;  left: 18%; }
+.story-4 { top: 1200vh; right: 14%; }
+.story-5 { top: 1700vh; left: 10%; }
 
 .instagram-link {
   position: absolute;
@@ -374,9 +380,11 @@
   left: 50%;
   transform: translateX(-50%);
   line-height: 0;
+  display: block;
 }
 
 .instagram-link svg {
   width: 60px;
   height: 60px;
+  display: block;
 }

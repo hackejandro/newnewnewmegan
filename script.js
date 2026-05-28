@@ -20,6 +20,14 @@ function showImages() {
   byeTinyImage.classList.add('hidden');
   reviewText.classList.remove('hidden');
   if (bigJellyfishLink) bigJellyfishLink.classList.remove('hidden');
+
+  // also reveal the social links + long scroll section
+  const substackEl = document.querySelector('.substack-link');
+  const scrollHintEl = document.querySelector('.scroll-hint');
+  const longScrollEl = document.querySelector('.long-scroll');
+  if (substackEl) substackEl.classList.remove('hidden');
+  if (scrollHintEl) scrollHintEl.classList.remove('hidden');
+  if (longScrollEl) longScrollEl.classList.remove('hidden');
 }
 
 const tinyImage = document.querySelector('.tiny-image');
