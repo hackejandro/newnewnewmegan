@@ -182,7 +182,8 @@
   z-index: 1;
 }
 
-.contact:hover .contact-info {
+.contact:hover .contact-info,
+.contact.open .contact-info {
   display: block;
 }
 
@@ -225,8 +226,6 @@
 .new-book-announcement {
   text-align: center;
   padding: 20px 20px 10px;
-  position: relative;
-  z-index: 2;
 }
 
 .new-book-link {
@@ -307,4 +306,77 @@
 .jellyfish-overlay img {
   max-height: 90vh;
   max-width: 90vw;
+}
+
+/* Random dog flash */
+.random-dog {
+  position: fixed;
+  width: 220px;
+  height: auto;
+  z-index: 50;
+  pointer-events: none;
+}
+
+/* Substack link, fixed bottom-right of viewport */
+.substack-link {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 40;
+  line-height: 0;
+}
+
+.substack-link svg {
+  width: 36px;
+  height: 36px;
+}
+
+.scroll-hint {
+  position: fixed;
+  bottom: 70px;
+  right: 24px;
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+  z-index: 40;
+  pointer-events: none;
+}
+
+/* Long scroll section with scattered short story links */
+.long-scroll {
+  position: relative;
+  width: 100%;
+  height: 2000vh;
+}
+
+.story-link {
+  position: absolute;
+  text-decoration: none;
+  color: #222;
+  font-size: 18px;
+  padding: 6px 10px;
+  white-space: nowrap;
+}
+
+.story-link:hover {
+  text-decoration: underline;
+}
+
+.story-1 { top: 4%;  left: 8%;  }
+.story-2 { top: 18%; right: 6%; }
+.story-3 { top: 38%; left: 18%; }
+.story-4 { top: 62%; right: 14%; }
+.story-5 { top: 85%; left: 10%; }
+
+.instagram-link {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 0;
+}
+
+.instagram-link svg {
+  width: 60px;
+  height: 60px;
 }

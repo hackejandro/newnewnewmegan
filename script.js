@@ -47,6 +47,37 @@ if (largeJellyfishLink && jellyfishOverlay) {
   });
 }
 
+// Toggle the Info / contact dropdown on click
+const contact = document.querySelector('.contact');
+if (contact) {
+  contact.addEventListener('click', function (e) {
+    // ignore clicks on links inside the info box so they still navigate
+    if (e.target.closest('a')) return;
+    contact.classList.toggle('open');
+  });
+}
+
+// Random dog: flashes for 250ms at a random spot, then schedules the next flash
+const randomDog = document.querySelector('.random-dog');
+if (randomDog) {
+  function flashDog() {
+    const w = randomDog.offsetWidth || 220;
+    const h = randomDog.offsetHeight || 180;
+    const maxX = Math.max(0, window.innerWidth - w);
+    const maxY = Math.max(0, window.innerHeight - h);
+    randomDog.style.left = Math.floor(Math.random() * maxX) + 'px';
+    randomDog.style.top = Math.floor(Math.random() * maxY) + 'px';
+    randomDog.classList.remove('hidden');
+    setTimeout(function () {
+      randomDog.classList.add('hidden');
+      // wait between 2 and 10 seconds before showing again
+      setTimeout(flashDog, 2000 + Math.random() * 8000);
+    }, 250);
+  }
+  // first appearance after a short random delay
+  setTimeout(flashDog, 1500 + Math.random() * 3000);
+}
+
 // const bookImage = document.querySelector('.book-image img');
 // const kopenText = document.createElement('div');
 // kopenText.classList.add('kopen-text');
